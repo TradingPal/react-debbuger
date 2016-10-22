@@ -3,7 +3,7 @@
 react-native component that let you see the console inside your app, in just one click
 
 ##Demo
-#[example](https://github.com/TradingPal/react-debbuger/blob/master/example.gif)
+[example](https://github.com/TradingPal/react-debbuger/blob/master/example.gif)
 
 ##Pre-Requirements
 
