@@ -3,7 +3,7 @@
 react-native component that let you see the console inside your app, in just one click
 
 ##Demo
-[example](https://github.com/TradingPal/react-debbuger/blob/master/example.gif)
+![](http://i.giphy.com/3oz8xDUoOIPw1UCqJ2.gif)
 
 ##Pre-Requirements
 
@@ -77,5 +77,6 @@ you can chagne the image in the following path of the <Image> tag, maxHeigth and
 
 ##Thanks To 
 [NativeSH](https://github.com/NativeSH/react-native-console-panel) (for the console panel)
+
 [kevinstumpf](https://github.com/kevinstumpf/react-native-flip-view) (for the flip view animation)
 
