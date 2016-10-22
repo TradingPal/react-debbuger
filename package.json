@@ -1,7 +1,7 @@
 {
   "name": "react-debbuger",
   "version": "0.0.1",
-  "description": "JavaScript implementation of a view container that can flip between its front and back",
+  "description": "JavaScript implementation of a view container that can flip between its front and back, where the back has a console.log and the front is your aplication.",
   "main": "DragDebuger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
