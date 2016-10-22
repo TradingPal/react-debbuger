@@ -1,47 +1,29 @@
 {
-  "name": "DropDebugger",
+  "name": "react-debbuger",
   "version": "0.0.1",
-  "description": "A way to use the console log inside your react native app",
-  "author": "Bernardo Orozco berny.orozco@hotmail.com",
-  "private": false,
+  "description": "JavaScript implementation of a view container that can flip between its front and back",
+  "main": "DragDebuger.js",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "15.3.2",
-    "react-native": "0.35.0"
-  },
-  "main": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TradingPal/react-debbuger.git"
-  },
-  "bugs": {
-    "url": "https://github.com/TradingPal/react-debbuger/issues"
+    "url": "https://github.com/TradingPal/react-debbuger"
   },
   "keywords": [
     "react-native",
+    "react-component",
+    "ios",
+    "android",
     "Debugger",
     "flip-view",
     "drag and drop",
     "pan responder"
   ],
-  "jest": {
-    "preset": "jest-react-native"
+  "author": "Infinity0106",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TradingPal/react-debbuger/issues"
   },
-  "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-jest": "16.0.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-react-native": "1.9.0",
-    "jest": "16.0.1",
-    "jest-react-native": "16.0.0",
-    "react-test-renderer": "15.3.2",
-    "whatwg-fetch": "1.0.0"
-  },
-  "publishConfig": {
-    "registry":""
-  },
-  "license": "MIT"
+  "homepage": "https://github.com/TradingPal/react-debbuger#readme"
 }
