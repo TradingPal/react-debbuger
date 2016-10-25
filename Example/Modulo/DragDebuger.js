@@ -18,8 +18,16 @@ class DragDebuger extends Component{
 
     static propTypes={
         positionX: PropTypes.number,
-        positionY: PropTypes.number
+        positionY: PropTypes.number,
+        sourceIMG: PropTypes.object
     };
+
+
+    static defaultProps ={
+        positionX: 0,
+        positionY: 0,
+    };
+
 
     constructor(props){
         super(props);
@@ -109,21 +117,17 @@ class DragDebuger extends Component{
                 front={this.props.children}
                 back={this.renderBack()}
                 isFlipped={this.state.isFlipped}
-                onFlipped={(val) => {this.click(val)}}
+                onFlipped={() => {}}
                 flipAxis="y"
                 flipEasing={Easing.out(Easing.ease)}
                 flipDuration={500}
                 perspective={1000}/>
 		);
 	};
-    click(flip){
-        console.log("isFlipped: "+flip);
-        console.log(this.props.children);
-    };
     //aqui puede ir el consol.panel o el debuger
 	renderBack(){
 		return (
-			<View style={styles.CP}>
+			<View>
 				{ConsolePanel}
 			</View>
 		);
@@ -136,13 +140,19 @@ class DragDebuger extends Component{
 
     //boton para arrastrar y click y todo 
 	renderDraggable(){
+        if(typeof this.props.sourceIMG === "undefined"){
+            var option = <Image style={styles.bugimg} source={require('./../img/bug_icon.png')}/>
+        }
+        else{
+            var option = this.props.sourceIMG;
+        }
 		return (
 				<View style={styles.draggableContainer}>
 						<Animated.View 
 						{...this.panResponder.panHandlers}
 						style={[styles.image, this.state.pan.getLayout()]}>
 							<TouchableOpacity onPress={()=>{this.setState({isFlipped:!this.state.isFlipped})}}>
-								<Image style={styles.bugimg} source={require('./../img/bug_icon.png')}/>
+                                {option}
 							</TouchableOpacity>
 						</Animated.View>						
 				</View>
@@ -196,13 +206,6 @@ const styles = StyleSheet.create({
 	},
 	coverDropZone:{
 		opacity: 0
-	},
-	CP : {
-		flex			: 1, 
-		backgroundColor	: '#1565C0', 
-		justifyContent	: 'center', 
-		alignItems		: 'center',
-		transform:[{skewY: '180deg'}]
 	}
 });
 

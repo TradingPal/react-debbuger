@@ -2,33 +2,32 @@
 
 react-native component that let you see the console inside your app, in just one click
 
-##Demo
+## Demo
 ![](http://i.giphy.com/3oz8xDUoOIPw1UCqJ2.gif)
 
-##Pre-Requirements
+## Pre-Requirements
 
-###react-native-console-panel
+### react-native-console-panel
 ```sh
 npm install --save react-native-console-panel
 ```
-###react-native-flip-view
+### react-native-flip-view
 ```sh
 npm install --save react-native-flip-view
 ```
-you will have to edit a file in flip-view
-(react-native-flip-view/index.js)
+
+**IF YOU ARE USING ANDROID YOU WILL HAVE TO EDIT A FILE IN FLIP-VIEW**
+(react-native-flip-view/index.js) line 50
 ```js
 var interpolationConfig = {inputRange: [0, 1], outputRange: ["0deg", "180deg"]};
 ```
-line 50
 
-
-##Installation
+## Installation
 ```sh
 npm i react-debbuger
 ```
 
-##Example 
+## Example 
 ```js
 import DragDebuger from "DragDebuger.js";
 ...
@@ -39,7 +38,7 @@ render(){
 			{title: "Second Scene", index: 1},
 		];
 		return(
-			<DragDebuger positionX={175} positionY={275}>
+			<DragDebuger positionX={175} positionY={275} sourceIMG={this.image()}>
 				<Navigator
 					initialRoute={routes[0]}
 					initialRouteStack={routes}
@@ -60,14 +59,21 @@ render(){
 					/>
 			</DragDebuger>
 		);
-}
+};
+image(){
+	return(<Image style={{width:50,height:50}} source={{uri:'http://hitchcock.itc.virginia.edu/Slavery/next.gif'}}/>);
+};
 ```
 
-##Props
-positionX= initial x value for Animates.ValueXY();
-positionY= initial y value for Animates.ValueXY();
+## Props
+|Prop		|Description							|Default					|
+|-----------|---------------------------------------|---------------------------|
+|`positionX`|initial X value for Animates.ValueXY();| 0							|
+|`positionY`|initial Y value for Animates.ValueXY();| 0							|
+|`sourceIMG`|initial Image for the icon 			|![bug img](./bug_img.png)	|
 
-##Customize
+
+## Customize
 you can chagne the image in the following path of the <Image> tag, maxHeigth and maxWidth 50
 ```js
 <TouchableOpacity onPress={()=>{this.setState({isFlipped:!this.state.isFlipped})}}>
@@ -75,8 +81,6 @@ you can chagne the image in the following path of the <Image> tag, maxHeigth and
 </TouchableOpacity>
 ```
 
-##Thanks To 
-[NativeSH](https://github.com/NativeSH/react-native-console-panel) (for the console panel)
-
-[kevinstumpf](https://github.com/kevinstumpf/react-native-flip-view) (for the flip view animation)
-
+## Thanks To 
+* [NativeSH](https://github.com/NativeSH/react-native-console-panel) (for the console panel)
+* [kevinstumpf](https://github.com/kevinstumpf/react-native-flip-view) (for the flip view animation)

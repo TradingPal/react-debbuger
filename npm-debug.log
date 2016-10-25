@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Infinity0106\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.8
+3 info using node@v4.5.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle react-debbuger@0.0.1~prestart: react-debbuger@0.0.1
+6 silly lifecycle react-debbuger@0.0.1~prestart: no script for prestart, continuing
+7 info lifecycle react-debbuger@0.0.1~start: react-debbuger@0.0.1
+8 verbose lifecycle react-debbuger@0.0.1~start: unsafe-perm in lifecycle true
+9 verbose lifecycle react-debbuger@0.0.1~start: PATH: C:\Users\Infinity0106\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\Users\Infinity0106\Documents\TRADING_PAL\react-native-first\react-debbuger\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\Microsoft VS Code\bin;C:\adb;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\Infinity0106\AppData\Local\Android\sdk\tools;C:\Program Files (x86)\Universal Extractor;C:\Program Files (x86)\Universal Extractor\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\Microsoft VS Code\bin;C:\adb;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\Infinity0106\AppData\Local\Android\sdk\tools;C:\Program Files (x86)\Universal Extractor;C:\Program Files (x86)\Universal Extractor\bin;C:\MinGW\bin;C:\Users\Infinity0106\AppData\Roaming\npm;C:\Users\Infinity0106\AppData\Local\GitHub\PortableGit_d76a6a98c9315931ec4927243517bc09e9b731a0\cmd;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin;C:\Users\Infinity0106\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Infinity0106\AppData\Roaming\npm\watchman.exe
+10 verbose lifecycle react-debbuger@0.0.1~start: CWD: C:\Users\Infinity0106\Documents\TRADING_PAL\react-native-first\react-debbuger
+11 silly lifecycle react-debbuger@0.0.1~start: Args: [ '/d /s /c', 'node your-script.js' ]
+12 silly lifecycle react-debbuger@0.0.1~start: Returned: code: 1  signal: null
+13 info lifecycle react-debbuger@0.0.1~start: Failed to exec start script
+14 verbose stack Error: react-debbuger@0.0.1 start: `node your-script.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Infinity0106\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Infinity0106\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:829:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid react-debbuger@0.0.1
+16 verbose cwd C:\Users\Infinity0106\Documents\TRADING_PAL\react-native-first\react-debbuger
+17 error Windows_NT 10.0.14393
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Infinity0106\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v4.5.0
+20 error npm  v3.10.8
+21 error code ELIFECYCLE
+22 error react-debbuger@0.0.1 start: `node your-script.js`
+22 error Exit status 1
+23 error Failed at the react-debbuger@0.0.1 start script 'node your-script.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the react-debbuger package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node your-script.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs react-debbuger
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls react-debbuger
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
