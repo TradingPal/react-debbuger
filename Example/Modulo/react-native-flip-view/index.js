@@ -12,6 +12,7 @@ var {
   Easing,
   StyleSheet,
   Animated,
+  Platform
   } = ReactNative;
 
 class FlipView extends Component {
@@ -47,7 +48,13 @@ class FlipView extends Component {
     var frontRotationAnimatedValue = new Animated.Value(targetRenderState.frontRotation);
     var backRotationAnimatedValue = new Animated.Value(targetRenderState.backRotation);
 
-    var interpolationConfig = {inputRange: [0, 1], outputRange: ["0deg", "180deg"]};
+    if(Platform.OS === 'ios'){
+      var interpolationConfig = {inputRange: [0, 1], outputRange: ["0deg", "360deg"]};
+    }
+    else{
+      var interpolationConfig = {inputRange: [0, 1], outputRange: ["0deg", "180deg"]};
+    }
+    
     var frontRotation = frontRotationAnimatedValue.interpolate(interpolationConfig);
     var backRotation = backRotationAnimatedValue.interpolate(interpolationConfig);
 
@@ -77,21 +84,44 @@ class FlipView extends Component {
   render = () => {
     var rotateProperty = this.props.flipAxis === 'y' ? 'rotateY' : 'rotateX';
 
-    return (
-      <View {...this.props}>
-        <Animated.View
-          pointerEvents={this.state.isFlipped ? 'none' : 'auto'}
-          style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.frontRotation}]}]}>
-          {this.props.front}
-        </Animated.View>
-        <Animated.View
-          pointerEvents={this.state.isFlipped ? 'auto' : 'none'}
-          style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.backRotation}]}]}>
-          {this.props.back}
-        </Animated.View>
-      </View>
-    );
+    if(Platform.OS === "ios"){
+      return (
+        <View {...this.props}>
+          <Animated.View
+            pointerEvents={this.state.isFlipped ? 'none' : 'auto'}
+            style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.frontRotation}]}]}>
+            {this.props.front}
+          </Animated.View>
+          <Animated.View
+            pointerEvents={this.state.isFlipped ? 'auto' : 'none'}
+            style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.backRotation}]}]}>
+                {this.props.back}
+          </Animated.View>
+        </View>
+      );
+    }
+    else{
+      return (
+        <View {...this.props}>
+          <Animated.View
+            pointerEvents={this.state.isFlipped ? 'none' : 'auto'}
+            style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.frontRotation}]}]}>
+            {this.props.front}
+          </Animated.View>
+          <Animated.View
+            pointerEvents={this.state.isFlipped ? 'auto' : 'none'}
+            style={[styles.flippableView, {transform: [{perspective: this.props.perspective}, {[rotateProperty]: this.state.backRotation}]}]}>
+            <View style={styles.androidBack}>
+              {this.props.back}
+            </View>
+          </Animated.View>
+        </View>
+      );
+    }
+    
+    
   };
+
 
   flip = () => {
     this.props.onFlip();
@@ -135,6 +165,11 @@ var styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     backfaceVisibility: 'hidden',
+  },
+  androidBack:{
+    flex			: 1, 
+		backgroundColor	: '#1565C0',
+		transform:[{skewY: '180deg'}]
   }
 });
 
