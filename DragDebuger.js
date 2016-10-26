@@ -147,15 +147,9 @@ class DragDebuger extends Component{
             var option = this.props.sourceIMG;
         }
 		return (
-				<View style={styles.draggableContainer}>
-						<Animated.View 
-						{...this.panResponder.panHandlers}
-						style={[styles.image, this.state.pan.getLayout()]}>
-							<TouchableOpacity onPress={()=>{this.setState({isFlipped:!this.state.isFlipped})}}>
-                                {option}
-							</TouchableOpacity>
-						</Animated.View>						
-				</View>
+            <TouchableOpacity onPress={()=>{this.setState({isFlipped:!this.state.isFlipped})}}>
+                {option}
+            </TouchableOpacity>
 		);
 	};
 };
@@ -179,8 +173,8 @@ const styles = StyleSheet.create({
     },
     draggableContainer: {
         position    : 'absolute',
-        top         : Window.height/2 - IMG/2,
-        left        : Window.width/2 - IMG/2,
+        top: 7*Window.height/8,
+        left: 5*Window.width/6
     },
     image      : {
         width   : IMG,
