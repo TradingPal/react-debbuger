@@ -27,7 +27,7 @@ npm i react-debbuger
 
 ## Example 
 ```js
-import DragDebuger from "DragDebuger.js";
+import DragDebuger from "react-native-drag-debugger.js";
 ...
 
 render(){
