@@ -3,10 +3,11 @@ import {
   AppRegistry,
   Text,
   TouchableHighlight,
-  Navigator
+  Navigator,
+  Image
 } from 'react-native';
 
-import DragDebuger from './Modulo/DragDebuger.js';
+import DragDebugger from './Modulo/react-native-drag-debugger.js';
 
 export default class reactNativeFirst extends Component {
 
@@ -17,7 +18,7 @@ export default class reactNativeFirst extends Component {
 			{title: 'Second Scene', index: 1},
 		];
 		return(
-			<DragDebuger positionX={175} positionY={275}>
+			<DragDebugger positionX={325} positionY={550} sourceIMG={this.image()}>
 				<Navigator
 					initialRoute={routes[0]}
 					initialRouteStack={routes}
@@ -36,13 +37,14 @@ export default class reactNativeFirst extends Component {
 					}
 					style={{borderColor: 'red',borderWidth:2, backgroundColor: 'white'}}
 					/>
-			</DragDebuger>
+			</DragDebugger>
 		);
 	}
+	image(){
+		return(<Image style={{width:50,height:50}} source={{uri:'http://hitchcock.itc.virginia.edu/Slavery/next.gif'}}/>);
+	};
 
 
 }
 
 AppRegistry.registerComponent('reactNativeFirst', () => reactNativeFirst);
-
-//http://reactscript.com/react-native-flip-view-component-2/

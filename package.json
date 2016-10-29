@@ -1,10 +1,15 @@
 {
-  "name": "react-debbuger",
-  "version": "0.0.1",
+  "name": "react-native-drag-debugger",
+  "version": "0.1.1",
   "description": "JavaScript implementation of a view container that can flip between its front and back, where the back has a console.log and the front is your aplication.",
   "main": "DragDebuger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react-native-gesture-responder": "0.1.1",
+    "react-native-console-panel": "0.1.0",
+    "react-native-flip-view": "git://github.com/Infinity0106/react-native-flip-view.git#commit-ish"
   },
   "repository": {
     "type": "git",

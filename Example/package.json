@@ -9,8 +9,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "15.3.2",
-    "react-native": "0.35.0"
+    "react-native-gesture-responder": "0.1.1",
+    "react-native-console-panel": "0.1.0",
+    "react-native-flip-view": "git://github.com/Infinity0106/react-native-flip-view.git#commit-ish"
   },
   "main": "",
   "repository": {
@@ -41,7 +42,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "publishConfig": {
-    "registry":""
+    "registry": ""
   },
   "license": "MIT"
 }

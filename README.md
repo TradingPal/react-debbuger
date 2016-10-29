@@ -1,6 +1,6 @@
-# react-debbuger
+# react-native-drag-debugger
 
-react-native component that let you see the console inside your app, in just one click
+react-native component that let you see the console inside your app, in just one tap
 
 ## Demo
 ![](http://i.giphy.com/3oz8xDUoOIPw1UCqJ2.gif)
@@ -13,13 +13,11 @@ npm install --save react-native-console-panel
 ```
 ### react-native-flip-view
 ```sh
-npm install --save react-native-flip-view
+npm install git://github.com/Infinity0106/react-native-flip-view.git
 ```
-
-**IF YOU ARE USING ANDROID YOU WILL HAVE TO EDIT A FILE IN FLIP-VIEW**
-(react-native-flip-view/index.js) line 50
-```js
-var interpolationConfig = {inputRange: [0, 1], outputRange: ["0deg", "180deg"]};
+### react-native-gesture-responder
+```sh
+npm i react-native-gesture-responder
 ```
 
 ## Installation
@@ -70,17 +68,10 @@ image(){
 |-----------|---------------------------------------|---------------------------|
 |`positionX`|initial X value for Animates.ValueXY();| 0							|
 |`positionY`|initial Y value for Animates.ValueXY();| 0							|
-|`sourceIMG`|initial Image for the icon 			|![bug img](./bug_img.png)	|
+|`sourceIMG`|initial Image for the icon 			|![bug img](./bug_icon.png)	|
 
-
-## Customize
-you can chagne the image in the following path of the <Image> tag, maxHeigth and maxWidth 50
-```js
-<TouchableOpacity onPress={()=>{this.setState({isFlipped:!this.state.isFlipped})}}>
-    <Image style={styles.bugimg} source={require('./../img/bug_icon.png')}/>
-</TouchableOpacity>
-```
 
 ## Thanks To 
 * [NativeSH](https://github.com/NativeSH/react-native-console-panel) (for the console panel)
 * [kevinstumpf](https://github.com/kevinstumpf/react-native-flip-view) (for the flip view animation)
+* [ldn0x7dc](https://github.com/ldn0x7dc/react-native-gesture-responder) (for the geesture responder)

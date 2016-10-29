@@ -17,7 +17,7 @@ import { createResponder } from 'react-native-gesture-responder';
 
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
-class DragDebuger extends Component {
+class DragDebugger extends Component {
 
     static propTypes = {
         positionX: PropTypes.number,
@@ -229,4 +229,4 @@ const styles = StyleSheet.create({
     }
 });
 
-module.exports = DragDebuger;
+module.exports = DragDebugger;
