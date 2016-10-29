@@ -66,8 +66,8 @@ image(){
 ## Props
 |Prop		|Description							|Default					|
 |-----------|---------------------------------------|---------------------------|
-|`positionX`|initial X value for Animates.ValueXY();| 0							|
-|`positionY`|initial Y value for Animates.ValueXY();| 0							|
+|`positionX`|initial X value for left positioning	| 0							|
+|`positionY`|initial Y value for top positioning 	| 0							|
 |`sourceIMG`|initial Image for the icon 			|![bug img](./bug_icon.png)	|
 
 
